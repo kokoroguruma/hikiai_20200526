@@ -11,6 +11,27 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+	<!-- オプションのJavaScript -->
+	<!-- 最初にjQuery、次にPopper.js、次にBootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+
+
+	<!-- Datatabels -->
+	<link rel="stylesheet" type="text/css"
+		href="https:////cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+	<script type="text/javascript" src="https:////cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+
+
+
 </head>
 
 <body style="padding-top:4.5rem;">
@@ -121,8 +142,7 @@
 
 	<!-- 「data-**」でデータを渡せる。 -->
 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop"
-		data-whatever="@nanika1"
-	>
+		data-whatever="@nanika1">
 		data-targetの値でリンク
 	</button>
 
@@ -161,24 +181,79 @@
 
 
 
-	<!-- ここに本体 -->
+	<hr class="bg-danger">
+	<!-- DataTables -->
+
+	<!-- テーブルのベース -->
+	<table id="table1" border="1">
+		<thead>
+			<tr>
+				<th>No</th>
+				<th>Data</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>AAA</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>AAgaw</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>AAsa</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>AAgawe</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>AA</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>BBB</td>
+			</tr>
+		</tbody>
+
+	</table>
 
 
 
 
+	<script>
+		jQuery(function ($) {
+			// デフォルトの設定を変更
+			// $.extend($.fn.dataTable.defaults, {
+			// 	language: {
+			// 		url: "http://cdn.datatables.net/plug-ins/1.10.21/i18n/Japanese.json"
+			// 	}
+			// });
 
-	<!-- オプションのJavaScript -->
-	<!-- 最初にjQuery、次にPopper.js、次にBootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-		crossorigin="anonymous"></script>
 
+			$("#table1").DataTable();
+
+			// $("#table1").DataTable({
+			// 	"language": {
+			// 		"url": ""
+			// 	}
+			// });
+
+
+		});
+
+		// $(document).ready(function () {
+		// 	$('#table1').DataTable({
+		// 		"language": {
+		// 			"url": "//cdn.datatables.net/plug-ins/3cfcc339e89/i18n/Japanese.json"
+		// 		},
+		// 	});
+		// });
+
+	</script>
 
 </body>
 
