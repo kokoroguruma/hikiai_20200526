@@ -77,8 +77,7 @@
 
 				<!-- QRコード発行 -->
 				<div class="navbar-nav mr-auto">
-					<a class="nav-item nav-link shadow-sm" href="#"
-						aria-haspopup="true" aria-expanded="false">
+					<a class="nav-item nav-link shadow-sm" href="#" aria-haspopup="true" aria-expanded="false">
 						QRコード発行
 					</a>
 				</div>
@@ -102,6 +101,63 @@
 	</nav>
 	<!-- テスト作成：ここまで -->
 
+
+	<!-- パンくずリスト：ここから -->
+
+	<div>
+		<nav aria-label="パンくずリスト">
+			<ol class="breadcrumb mb-1">
+				<li class="breadcrumb-item"><a href="#">ホーム</a></li>
+				<li class="breadcrumb-item"><a href="#">イベント</a></li>
+				<li class="breadcrumb-item active" aria-current="page">イベント一覧</li>
+			</ol>
+		</nav>
+	</div>
+
+
+	<!-- パンくずリスト：ここまで -->
+
+	<!-- モーダル（ポップアップ）：ここから -->
+
+	<!-- 「data-**」でデータを渡せる。 -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop"
+		data-whatever="@nanika1"
+	>
+		data-targetの値でリンク
+	</button>
+
+	<!-- モーダルの設定 -->
+	<div class="modal" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+		aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">モーダルのタイトル</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+
+					<!-- 完了時の繊維「OK時の繊維」 -->
+					<a href="#" class="btn btn-primary">了解</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- モーダル用スクリプト -->
+	<script>
+
+
+	</script>
+
+
+	<!-- モーダル（ポップアップ）：ここまで -->
 
 
 
